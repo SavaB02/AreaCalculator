@@ -1,0 +1,3 @@
+Public Class clsParallelogram   'creating class for parallelogram shape
+    Inherits ClsShape   'Inherits abstract class clsShape
+End Class
