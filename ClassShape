@@ -1,0 +1,34 @@
+Public MustInherit Class ClsShape   'Keyword MustInherit indicates that this is an Abstract Class 
+    'Setting values as private
+    Private _Var1 As Integer = 0
+    Private _Var2 As Integer = 0
+    Private _Result As Integer = 0
+    'creating sub to calculate area
+    Public Overridable Sub Area() 'Making that Sub overridable so that whenever I need to override the formula inside I would be able to
+        Result = Var1 * Var2
+    End Sub
+    Public Property Var1 As Integer     'creating a new function to interact with private values
+        Get 'read
+            Return _Var1
+        End Get
+        Set(value As Integer)   'write
+            _Var1 = value
+        End Set
+    End Property
+    Public Property Var2 As Integer     'creating a new function to interact with private values
+        Get 'read
+            Return _Var2
+        End Get
+        Set(value As Integer)
+            _Var2 = value       'write
+        End Set
+    End Property
+    Public Property Result              'creating a new function to interact with private values
+        Get 'read
+            Return _Result
+        End Get
+        Set(value)
+            _Result = value     'write
+        End Set
+    End Property
+End Class
