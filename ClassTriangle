@@ -1,0 +1,9 @@
+Public Class clsTriangle    'creating class for triangle shape
+    Inherits ClsShape   'Inherits abstract class clsShape
+
+    'Making new sub that will override Area sub from clsShape to add a new formula
+    Public Overrides Sub Area()     'adding new formula, because to calculate an area for the triangle we have to use a different one
+        Result = Var1 * Var2 / 2
+    End Sub
+
+End Class
