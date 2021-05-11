@@ -1,0 +1,15 @@
+Public Class frmMain
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        End     'closes program
+    End Sub
+
+    Private Sub btnCalculate_Click(sender As Object, e As EventArgs) Handles btnCalculate.Click
+        frmCal.Show()   'shows another window
+        Me.Hide()   'hides current window
+    End Sub
+
+    Private Sub btnInfo_Click(sender As Object, e As EventArgs) Handles btnInfo.Click
+        frmInfo.Show()  'shows another window
+        Me.Hide()   'hides current window
+    End Sub
+End Class
