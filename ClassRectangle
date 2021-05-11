@@ -1,0 +1,3 @@
+Public Class clsRectangle   'creating class for rectangle shape
+    Inherits ClsShape   'Inherits abstract class clsShape
+End Class
