@@ -1,0 +1,61 @@
+Public Class frmCal
+    'declaring new OBJECTS from their CLASSES
+    Dim Rec1 As clsRectangle = New clsRectangle
+    Dim Par1 As clsParallelogram = New clsParallelogram
+    Dim Tri1 As clsTriangle = New clsTriangle
+    Dim Cir1 As clsCircle = New clsCircle
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+        frmMain.Show()  'shows another window
+        Me.Hide()       'hides current window
+    End Sub
+
+
+    'RECTANGLE
+    Private Sub txtRecL_TextChanged(sender As Object, e As EventArgs) Handles txtRecL.TextChanged
+        Rec1.Var1 = Val(txtRecL.Text)   'first variable of this object will be equal to that textbox input
+    End Sub
+    Private Sub txtRecW_TextChanged(sender As Object, e As EventArgs) Handles txtRecW.TextChanged
+        Rec1.Var2 = Val(txtRecW.Text)   'second variable of this object will be equal to that textbox input
+    End Sub
+    Private Sub btnRec_Click(sender As Object, e As EventArgs) Handles btnRec.Click
+        Rec1.Area()     'calling Area sub from SHAPE class to calculate area
+        txtRecResult.Text = Rec1.Result     'displaying the result in the specific textbox
+    End Sub
+
+
+    'PARALLELOGRAM
+    Private Sub txtParB_TextChanged(sender As Object, e As EventArgs) Handles txtParB.TextChanged
+        Par1.Var1 = Val(txtParB.Text)    'first variable of this object will be equal to that textbox input
+    End Sub
+    Private Sub txtParH_TextChanged(sender As Object, e As EventArgs) Handles txtParH.TextChanged
+        Par1.Var2 = Val(txtParH.Text)    'second variable of this object will be equal to that textbox input
+    End Sub
+    Private Sub btnPar_Click(sender As Object, e As EventArgs) Handles btnPar.Click
+        Par1.Area()     'calling Area sub from SHAPE class to calculate area
+        txtParResult.Text = Par1.Result     'displaying the result in the specific textbox
+    End Sub
+
+
+    'CIRCLE
+    Private Sub txtCirR_TextChanged(sender As Object, e As EventArgs) Handles txtCirR.TextChanged
+        Cir1.Var1 = Val(txtCirR.Text)        'first variable of this object will be equal to that textbox input
+    End Sub
+    Private Sub btnCir_Click(sender As Object, e As EventArgs) Handles btnCir.Click
+        Cir1.Area()      'calling another sub from Circle class to calculate area
+        txtCirResult.Text = Cir1.Result
+    End Sub
+
+
+    'TRIANGLE
+    Private Sub txtTrianA_TextChanged(sender As Object, e As EventArgs) Handles txtTrianBase.TextChanged
+        Tri1.Var1 = Val(txtTrianBase.Text)        'first variable of this object will be equal to that textbox input
+    End Sub
+    Private Sub txtTrianB_TextChanged(sender As Object, e As EventArgs) Handles txtTrianHeight.TextChanged
+        Tri1.Var2 = Val(txtTrianHeight.Text)     'second variable of this object will be equal to that textbox input
+    End Sub
+    Private Sub btnTrian_Click(sender As Object, e As EventArgs) Handles btnTrian.Click
+        Tri1.Area()     'calling Area sub from SHAPE class to calculate area
+        txtTrianResult.Text = Tri1.Result       'displaying the result in the specific textbox
+    End Sub
+End Class
